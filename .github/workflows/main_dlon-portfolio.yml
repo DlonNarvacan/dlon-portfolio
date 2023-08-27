@@ -32,6 +32,9 @@ jobs:
         run: |
           echo "output: 'standalone'" >> next.config.js
 
+      - name: List files in out folder
+        run: ls -la out
+
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v1
         with:
