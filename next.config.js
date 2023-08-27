@@ -1,6 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: "standalone", // added this option
-};
+const nextConfig = {};
 
 module.exports = nextConfig;
