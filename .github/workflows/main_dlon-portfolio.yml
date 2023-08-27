@@ -28,6 +28,10 @@ jobs:
           npm run build --if-present
           npm run test --if-present
 
+      - name: Output standalone Next.js app
+        run: |
+          echo "output: 'standalone'" >> next.config.js
+
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
@@ -55,4 +59,4 @@ jobs:
           app-name: "dlon-portfolio"
           slot-name: "Production"
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_584FCF8530524F0FAFA6E985CDC96CB7 }}
-          package: .
+          package: out # changed from package: .
